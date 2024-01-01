@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+package com.cooffee.orderservice.v1;
+
+service Order {
+    rpc GetOrder(OrderRequest) returns (OrderResponse);
+}
+
+message OrderRequest {
+    string user_id = 1;
+}
+
+message OrderResponse {
+    string test_response = 1;
+}
